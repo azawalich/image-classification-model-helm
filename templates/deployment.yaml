@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: image-classification-model-deployment
+  name: classification-model-deployment
   namespace: f1-platform
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: image-classification-model-app
+      app: classification-model-app
   template:
     metadata:
       labels:
-        app: image-classification-model-app
+        app: classification-model-app
     spec:
       containers:
-        - name: image-classification-model-app
+        - name: classification-model-app
           image: f1-image-classification-model:v0.7
           imagePullPolicy: Never
           ports:

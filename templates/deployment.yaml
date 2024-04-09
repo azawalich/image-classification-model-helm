@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: classification-model-app
-          image: f1-image-classification-model:v0.7
+          image: f1-image-classification-model:v0.8
           imagePullPolicy: Never
           ports:
             - containerPort: 8000

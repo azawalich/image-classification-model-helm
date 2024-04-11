@@ -32,8 +32,8 @@ spec:
           env:
           - name: MINIO_URL
             value: minio.f1-platform.k8s.io
-          - name: RUN_ON_MINIKUBE
-            value: "True"
+          - name: DEBUGGING_LOCAL
+            value: "False"
           - name: MINIO_ACCESS_KEY
             valueFrom:
               secretKeyRef:
@@ -45,4 +45,4 @@ spec:
                 name: minio-dashboard-secret
                 key: secret_key
           command: ["python", "-m", "main.py"]
-          args: ["--minio-url", "$(MINIO_URL)", "--access-key", "$(MINIO_ACCESS_KEY)", "--secret-key", "$(MINIO_SECRET_ACCESS_KEY)"]
+          args: ["--minio-url", "$(MINIO_URL)", "--access-key", "$(MINIO_ACCESS_KEY)", "--secret-key", "$(MINIO_SECRET_ACCESS_KEY)", "--debugging-local", "$(DEBUGGING_LOCAL)"]

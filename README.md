@@ -7,7 +7,7 @@ Mentioned model is avaliable both:
 - and [on GitLab](https://gitlab.com/formula-1-fullstack-mlops/formula-one-image-classification-model).
 
 # Adding image to use in minikube
-`minikube image load f1-image-classification-model:v0.9`
+`minikube image load f1-image-classification-model:v0.10`
 
 # Execution steps 
 ## 0. RUNNING MINIKUBE LOCAL CLUSTER ##
